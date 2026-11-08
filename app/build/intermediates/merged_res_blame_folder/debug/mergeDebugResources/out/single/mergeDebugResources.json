@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_cuadriceps_2.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_cuadriceps_2.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_pecho_2.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_pecho_2.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_biceps_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_biceps_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_biceps.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_biceps.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_session_stats.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_session_stats.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_cuello_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_cuello_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_core.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_core.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_gluteos.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_gluteos.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_timer_close.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_timer_close.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_femoral_1.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_femoral_1.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_aductores_1.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_aductores_1.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_gymtrack_logo.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_gymtrack_logo.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_pantorrillas_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_pantorrillas_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_gluteos_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_gluteos_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_pantorrillas.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_pantorrillas.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_pecho_1.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_pecho_1.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_antebrazos_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_antebrazos_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_cuadriceps_1_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_cuadriceps_1_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_timer_stop.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_timer_stop.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_hombro_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_hombro_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_bg_timer_overlay.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/bg_timer_overlay.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/xml_file_paths.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_triceps.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_triceps.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_femoral_2.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_femoral_2.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_bg_timer_button.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/bg_timer_button.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_aductores_2.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_aductores_2.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_pibble_espera.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/pibble_espera.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_femoral_1_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_femoral_1_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_triceps_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_triceps_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_cuadriceps_1.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_cuadriceps_1.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_timer_reset.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_timer_reset.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_timer_minimize.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_timer_minimize.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_pecho_1_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_pecho_1_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_antebrazos.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_antebrazos.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/xml_backup_rules.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_aductores_2_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_aductores_2_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_cuadriceps_2_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_cuadriceps_2_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_espalda.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_espalda.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_hombro.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_hombro.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_cuello.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_cuello.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/layout_overlay_timer.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/layout/overlay_timer.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_pecho_2_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_pecho_2_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_femoral_2_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_femoral_2_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_timer_play.xml.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_timer_play.xml"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_pibble_respondiendo.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/pibble_respondiendo.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_aductores_1_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_aductores_1_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_core_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_core_night.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable_ic_mealtrack_logo.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable/ic_mealtrack_logo.png"
+    },
+    {
+        "merged": "com.example.gymtrack.app-debug-70:/drawable-nodpi_muscle_espalda_night.png.flat",
+        "source": "com.example.gymtrack.app-main-72:/drawable-nodpi/muscle_espalda_night.png"
+    }
+]

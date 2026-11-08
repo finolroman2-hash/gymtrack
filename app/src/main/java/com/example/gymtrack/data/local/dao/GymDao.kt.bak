@@ -1,0 +1,94 @@
+package com.example.gymtrack.data.local.dao
+
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Update
+import com.example.gymtrack.data.local.entities.ExerciseEntity
+import com.example.gymtrack.data.local.entities.SessionEntity
+import com.example.gymtrack.data.local.entities.SessionSetPreviewRow
+import com.example.gymtrack.data.local.entities.SetEntity
+import com.example.gymtrack.data.local.entities.SetProgressRow
+import kotlinx.coroutines.flow.Flow
+
+@Dao
+interface GymDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertSession(session: SessionEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertExercise(exercise: ExerciseEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertSet(set: SetEntity): Long
+
+    @Update
+    suspend fun updateExercise(exercise: ExerciseEntity)
+
+    @Delete
+    suspend fun deleteExercise(exercise: ExerciseEntity)
+
+    @Update
+    suspend fun updateSet(set: SetEntity)
+
+    @Delete
+    suspend fun deleteSet(set: SetEntity)
+
+    @Delete
+    suspend fun deleteSession(session: SessionEntity)
+
+    @Query("SELECT * FROM sessions WHERE userName = :userName ORDER BY dateTimestamp DESC")
+    fun observeSessions(userName: String): Flow<List<SessionEntity>>
+
+    @Query("SELECT * FROM exercises WHERE userName = :userName ORDER BY name ASC")
+    fun observeExercises(userName: String): Flow<List<ExerciseEntity>>
+
+    @Query("SELECT * FROM sets WHERE sessionId = :sessionId ORDER BY createdAt ASC")
+    fun observeSetsBySession(sessionId: Long): Flow<List<SetEntity>>
+
+    @Query(
+        """
+        SELECT sess.dateTimestamp AS sessionDate, s.reps AS reps, s.weight AS weight, ex.unitType AS unitType
+        FROM sets s
+        INNER JOIN sessions sess ON sess.id = s.sessionId
+        INNER JOIN exercises ex ON ex.id = s.exerciseId
+        WHERE s.exerciseId = :exerciseId
+        AND sess.userName = :userName
+        AND sess.dateTimestamp BETWEEN :fromTs AND :toTs
+        ORDER BY sess.dateTimestamp ASC
+        """
+    )
+    fun observeProgress(
+        userName: String,
+        exerciseId: Long,
+        fromTs: Long,
+        toTs: Long
+    ): Flow<List<SetProgressRow>>
+
+    @Query(
+        """
+        SELECT sess.dateTimestamp AS sessionDate, s.reps AS reps, s.weight AS weight, ex.unitType AS unitType
+        FROM sets s
+        INNER JOIN sessions sess ON sess.id = s.sessionId
+        INNER JOIN exercises ex ON ex.id = s.exerciseId
+        WHERE s.exerciseId = :exerciseId
+        AND sess.userName = :userName
+        ORDER BY sess.dateTimestamp ASC
+        """
+    )
+    fun observeProgressAll(userName: String, exerciseId: Long): Flow<List<SetProgressRow>>
+
+    @Query(
+        """
+        SELECT ex.name AS exerciseName, s.reps AS reps, s.weight AS weight, s.rir AS rir
+        FROM sets s
+        INNER JOIN exercises ex ON ex.id = s.exerciseId
+        WHERE s.sessionId = :sessionId
+        ORDER BY s.createdAt DESC
+        LIMIT 5
+        """
+    )
+    fun observeSessionPreview(sessionId: Long): Flow<List<SessionSetPreviewRow>>
+}

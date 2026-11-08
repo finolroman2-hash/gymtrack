@@ -1,0 +1,63 @@
+package com.example.gymtrack.ui.dashboard
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.gymtrack.data.local.dao.GymDao
+import com.example.gymtrack.data.local.entities.SetProgressRow
+import com.example.gymtrack.domain.ProgressionCalculator
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
+
+data class ProgressPoint(val x: Float, val y: Float, val raw: SetProgressRow)
+data class PeriodStats(val label: String, val bestOneRm: Float, val totalSets: Int)
+
+class DashboardViewModel(
+    private val dao: GymDao,
+    private val userName: String
+) : ViewModel() {
+    private val selectedExerciseId = MutableStateFlow<Long?>(null)
+
+    fun setExercise(exerciseId: Long?) {
+        selectedExerciseId.value = exerciseId
+    }
+
+    private val allRows = selectedExerciseId.flatMapLatest { exerciseId ->
+        if (exerciseId == null) {
+            flowOf(emptyList())
+        } else {
+            dao.observeProgressAll(userName, exerciseId)
+        }
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    val points: StateFlow<List<ProgressPoint>> = allRows.map { rows: List<SetProgressRow> ->
+        rows.map {
+            val oneRm = ProgressionCalculator.estimateOneRmBrzycki(it.weight, it.reps)
+            ProgressPoint(x = it.sessionDate.toFloat(), y = oneRm, raw = it)
+        }
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    val statsByPeriod: StateFlow<List<PeriodStats>> = allRows.map { rows ->
+        val now = System.currentTimeMillis()
+        val periods = listOf(
+            "Semana" to now - 7L * 24 * 60 * 60 * 1000,
+            "Mes" to now - 30L * 24 * 60 * 60 * 1000,
+            "Año" to now - 365L * 24 * 60 * 60 * 1000
+        )
+        periods.map { (label, from) ->
+            val filtered = rows.filter { it.sessionDate in from..now }
+            val best = filtered.maxOfOrNull {
+                ProgressionCalculator.estimateOneRmBrzycki(it.weight, it.reps)
+            } ?: 0f
+            PeriodStats(label = label, bestOneRm = best, totalSets = filtered.size)
+        }
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    val topPerformanceSets: StateFlow<List<ProgressPoint>> = points.map { rows ->
+        rows.sortedByDescending { it.y }.take(5)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+}

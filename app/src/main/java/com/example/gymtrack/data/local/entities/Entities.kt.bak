@@ -1,0 +1,67 @@
+package com.example.gymtrack.data.local.entities
+
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Index
+import androidx.room.PrimaryKey
+
+enum class UnitType { KG, PLATES }
+
+@Entity(tableName = "exercises")
+data class ExerciseEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0L,
+    val userName: String,
+    val name: String,
+    val unitType: UnitType
+)
+
+@Entity(tableName = "sessions")
+data class SessionEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0L,
+    val userName: String,
+    val customName: String,
+    val dateTimestamp: Long
+)
+
+@Entity(
+    tableName = "sets",
+    foreignKeys = [
+        ForeignKey(
+            entity = SessionEntity::class,
+            parentColumns = ["id"],
+            childColumns = ["sessionId"],
+            onDelete = ForeignKey.CASCADE
+        ),
+        ForeignKey(
+            entity = ExerciseEntity::class,
+            parentColumns = ["id"],
+            childColumns = ["exerciseId"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ],
+    indices = [Index("sessionId"), Index("exerciseId")]
+)
+data class SetEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0L,
+    val sessionId: Long,
+    val exerciseId: Long,
+    val reps: Int,
+    val weight: Float,
+    val rir: Int,
+    val note: String = "",
+    val createdAt: Long = System.currentTimeMillis()
+)
+
+data class SetProgressRow(
+    val sessionDate: Long,
+    val reps: Int,
+    val weight: Float,
+    val unitType: UnitType
+)
+
+data class SessionSetPreviewRow(
+    val exerciseName: String,
+    val reps: Int,
+    val weight: Float,
+    val rir: Int
+)

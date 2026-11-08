@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymTrack</string>
+
+    <string name="pibble_open">Ayuda</string>
+    <string name="pibble_sheet_title">Ayuda</string>
+    <string name="pibble_sheet_subtitle">Pregunta lo que no entiendas. Pibble necesita internet; el resto de la app no.</string>
+    <string name="pibble_settings_title">Ayuda</string>
+    <string name="pibble_settings_blurb">Consultas online; el resto funciona sin red.</string>
+    <string name="pibble_scope_warning">Necesita internet. Responde dudas de entrenamiento, te guía en la app y habla de Pibble. No diseña rutinas ni consejo médico.</string>
+    <string name="pibble_nav_button">Haz clic aquí</string>
+    <string name="pibble_loading_connect">Conectando con Pibble…</string>
+    <string name="pibble_no_internet">Sin conexión a internet. Activa datos o Wi‑Fi para usar la ayuda de Pibble.</string>
+    <string name="pibble_api_key_missing">Falta la clave de API. Añade GEMINI_API_KEY, GROQ_API_KEY u OPENROUTER_API_KEY en local.properties y vuelve a compilar.</string>
+    <string name="fatsecret_api_key_missing">Añade FATSECRET_CONSUMER_KEY y FATSECRET_CONSUMER_SECRET en local.properties y vuelve a compilar.</string>
+    <string name="pibble_all_providers_sleep">Uf, ya fueron suficientes preguntas por hoy… tengo que ir a dormir. Prueba más tarde, ¿vale?</string>
+    <string name="pibble_connect_failed">No se pudo conectar con Pibble. Comprueba tu internet e inténtalo de nuevo.</string>
+    <string name="pibble_query_rejected">Escribe una pregunta un poco más larga sobre entrenamiento o sobre Pibble.</string>
+    <string name="pibble_thinking">Pibble está pensando…</string>
+    <string name="pibble_model_not_ready">Pibble no está listo. Comprueba internet y vuelve a abrir la ayuda.</string>
+    <string name="pibble_response_failed_generic">No se pudo responder. Prueba de nuevo con una pregunta más corta.</string>
+    <string name="pibble_timeout_response">La respuesta tardó demasiado. Prueba con una pregunta más corta.</string>
+    <string name="pibble_paused_background">Se detuvo la generación al salir de la aplicación. Puedes preguntar de nuevo cuando quieras.</string>
+    <string name="pibble_question_label">Tu pregunta</string>
+    <string name="pibble_input_chars">%1$d/%2$d</string>
+    <string name="pibble_send">Enviar</string>
+    <string name="pibble_close">Volver</string>
+    <string name="pibble_back_content_description">Volver</string>
+    <string name="pibble_inference_error">Error al generar la respuesta.</string>
+    <string name="pibble_empty_response">No hubo texto de respuesta del modelo. Prueba de nuevo o reformula la pregunta.</string>
+    <string name="dummy_for_rebuild">rebuild</string>
+</resources>

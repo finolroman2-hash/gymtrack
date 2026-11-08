@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="timer_bg">#000000</color>
+    <color name="timer_border">#FFFFFF</color>
+    <color name="timer_button_red">#D32F2F</color>
+    <color name="timer_button_white">#FFFFFF</color>
+    <color name="timer_text">#FFFFFF</color>
+</resources>

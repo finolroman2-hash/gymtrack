@@ -1,0 +1,63 @@
+package com.example.gymtrack.ui.session
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.gymtrack.data.local.dao.GymDao
+import com.example.gymtrack.data.local.entities.SessionEntity
+import com.example.gymtrack.data.local.entities.SessionSetPreviewRow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+
+data class SessionUi(val id: Long, val title: String)
+
+class SessionsViewModel(
+    private val dao: GymDao,
+    private val userName: String
+) : ViewModel() {
+    val sessions: StateFlow<List<SessionUi>> = dao.observeSessions(userName)
+        .map { sessions ->
+            sessions.map { session ->
+                val dateText = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                    .format(Date(session.dateTimestamp))
+                SessionUi(session.id, "${session.customName} ($dateText)")
+            }
+        }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    fun addSession(name: String) {
+        if (name.isBlank()) return
+        viewModelScope.launch {
+            dao.insertSession(
+                SessionEntity(
+                    userName = userName,
+                    customName = name.trim(),
+                    dateTimestamp = System.currentTimeMillis()
+                )
+            )
+        }
+    }
+
+    fun deleteSession(sessionId: Long) {
+        viewModelScope.launch {
+            dao.deleteSession(
+                SessionEntity(
+                    id = sessionId,
+                    userName = userName,
+                    customName = "",
+                    dateTimestamp = 0L
+                )
+            )
+        }
+    }
+
+    fun observePreview(sessionId: Long): StateFlow<List<SessionSetPreviewRow>> {
+        return dao.observeSessionPreview(sessionId)
+            .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+    }
+}

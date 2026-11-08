@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Clip at top center -->
+    <path
+        android:pathData="M9.5,3 C9.5,2.17 10.17,1.5 11,1.5 L13,1.5 C13.83,1.5 14.5,2.17 14.5,3 L14.5,3.5 L16,3.5 C16.55,3.5 17,3.95 17,4.5 L17,5.5 L7,5.5 L7,4.5 C7,3.95 7.45,3.5 8,3.5 L9.5,3.5 Z"
+        android:fillColor="#000000"/>
+
+    <!-- Clipboard body -->
+    <path
+        android:pathData="M5,5.5 L5,21 C5,21.55 5.45,22 6,22 L18,22 C18.55,22 19,21.55 19,21 L19,5.5 C19,4.95 18.55,4.5 18,4.5 L17,4.5 L17,5.5 C17,6.05 16.55,6.5 16,6.5 L8,6.5 C7.45,6.5 7,6.05 7,5.5 L7,4.5 L6,4.5 C5.45,4.5 5,4.95 5,5.5 Z"
+        android:fillColor="#000000"
+        android:fillAlpha="0"/>
+
+    <!-- Clipboard body outline (stroke-style via filled shape minus inner) -->
+    <path
+        android:pathData="M6,4.5 C5.17,4.5 4.5,5.17 4.5,6 L4.5,21 C4.5,21.83 5.17,22.5 6,22.5 L18,22.5 C18.83,22.5 19.5,21.83 19.5,21 L19.5,6 C19.5,5.17 18.83,4.5 18,4.5 L17,4.5 L17,5.5 C17,6.33 16.33,7 15.5,7 L8.5,7 C7.67,7 7,6.33 7,5.5 L7,4.5 Z M6,5.5 L7,5.5 C7,6.33 7.67,7 8.5,7 L15.5,7 C16.33,7 17,6.33 17,5.5 L18,5.5 C18.28,5.5 18.5,5.72 18.5,6 L18.5,21 C18.5,21.28 18.28,21.5 18,21.5 L6,21.5 C5.72,21.5 5.5,21.28 5.5,21 L5.5,6 C5.5,5.72 5.72,5.5 6,5.5 Z"
+        android:fillColor="#000000"/>
+
+    <!-- Line 1 (top content line) -->
+    <path
+        android:pathData="M8,10.5 L16,10.5 C16.28,10.5 16.5,10.72 16.5,11 C16.5,11.28 16.28,11.5 16,11.5 L8,11.5 C7.72,11.5 7.5,11.28 7.5,11 C7.5,10.72 7.72,10.5 8,10.5 Z"
+        android:fillColor="#000000"/>
+
+    <!-- Line 2 -->
+    <path
+        android:pathData="M8,13.5 L16,13.5 C16.28,13.5 16.5,13.72 16.5,14 C16.5,14.28 16.28,14.5 16,14.5 L8,14.5 C7.72,14.5 7.5,14.28 7.5,14 C7.5,13.72 7.72,13.5 8,13.5 Z"
+        android:fillColor="#000000"/>
+
+    <!-- Line 3 (short) -->
+    <path
+        android:pathData="M8,16.5 L13,16.5 C13.28,16.5 13.5,16.72 13.5,17 C13.5,17.28 13.28,17.5 13,17.5 L8,17.5 C7.72,17.5 7.5,17.28 7.5,17 C7.5,16.72 7.72,16.5 8,16.5 Z"
+        android:fillColor="#000000"/>
+
+    <!-- Bar chart icon bottom-right (stats indicator) -->
+    <path
+        android:pathData="M14,19 L14,17 C14,16.72 14.22,16.5 14.5,16.5 L15.5,16.5 C15.78,16.5 16,16.72 16,17 L16,19 C16,19.28 15.78,19.5 15.5,19.5 L14.5,19.5 C14.22,19.5 14,19.28 14,19 Z"
+        android:fillColor="#000000"/>
+
+</vector>
